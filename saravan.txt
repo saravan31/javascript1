@@ -1,0 +1,473 @@
+html is white space collasping means it removes unwanted spaces.
+lorem10 it gives dummmy text for  10 words
+unsplash
+pixbay
+pexels website
+./ means cuurent directory
+for and id should be same value
+radio input we have to give name attribute same name for all radio buttons
+checkbox input we have to give differnent names for name attribute 
+
+
+css introduction
+
+priority order
+
+inline styling> internal styling>external  styling
+
+specificity order
+
+id>class>elements
+
+opacity means thickness of color. the value rangs from 0 to 1
+rgba it takes four values. here a is transparent
+
+hex values #RRGGBB
+#FF0000-RED
+#000000 or #000-black
+#00FF00-green
+
+coolors website to pick colors
+
+
+css in units
+
+1)px is dots and it doesn't depend on parents elements.
+
+
+
+2)% it depends on parent elements.it is a relative unit.
+
+3)em-relative depends on parent.
+1em=16px by default browser style.
+
+4)rem-relative depends on root.
+1rem=16px :default browser style
+
+vh-(viewport height)-precent of screen
+vw-precent of screen
+
+
+calc()- it performance + - / * operations
+
+
+min-height means starting from
+max-height means up to
+similar to min-width,max-width
+
+
+typography
+
+font-family
+font-size
+font-style- it used to apply style for content
+font-weight
+text-indent - to make space at the starting of paragraph
+
+
+
+line-height-is the property to maintain the distance between the lines.
+letter-spacing-is the property to maintain the distance between the letters
+word-spacing-is the property to maintain the distance between the words.
+text-decoration-
+text-transform- properties like lowercase,uppercase,captialize means each word of  first letter will be captilize
+text-shadow: x-axis y-axis blur color;   
+
+direction:ltr or rtl        left to rigth 
+
+css box model
+
+
+layers
+1.margin
+2.outline
+3.border
+4.padding
+5.content
+
+padding-the gap b/w the content and border.
+padding: 100px; - all sides 
+padding:30px 70px; -padding:top+bottom and left+right 
+padding:100px 20px 30px 55px                   padding:top right bottom left */
+
+
+6
+margin- the space between the screen and border. or the space outside the border elements 
+margin:110px 20px 30px 55px
+
+
+border-the space b/w the margin and padding.
+border-style: solid;
+border-width: 7px;
+border-color: blue;
+method-2
+border: 7px sloid red;  no order it means u can as ur wish
+border-radius:50px; the edges will turn into curves.
+
+
+outline:the gap b/w the margin and border. but border and outline are same.
+there are two properties 
+outline:7px sloid red;
+outline-offset:10px; it make the  differnces.
+
+
+
+
+Display property
+display:block it means always a start a new line and takes full width.
+display:inline it means does not  a start  new line and takes up as much as content space.
+
+
+ by default  some tags have inline and block elements
+
+inline elements
+1.span
+2.anchor
+3.img
+
+ ** to put inline elements in center of page use text-align:center
+
+block elemets
+1.div
+2.h1
+3.p
+
+**
+ ** to put block elements in center of page use margin-left:auto; and margin-right:auto;
+
+
+note: for inline elements we can't add padding and margin at the top and bottom so we have  to covert into block elements 
+then only we  can add it  by using display:block.
+   2nd method 
+    instead of coverting  into block elements use display:inline-block we can add  padding and margin at the top and bottom for inline elements.
+
+
+
+every time add margin:0;padding:0; box-sizing:border-box; in universal selector
+*****the CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+
+
+
+*list-style-type:square, circle etc.
+
+
+display:none  the element removes from web page
+visiblity:hidden the element hidden in web page. 
+opacity:0 to 1 values ranges              opacity -the thickness of the element
+
+
+
+
+background image css tutorial
+background:url("");
+bacground-repeat:repeat,no-repeat,repeat-x,repeat-y,space,round
+bacground-size:cover,contain
+bacground-position:top,bottom,center,left,rigth or we can percentages 0 0 one is x-axis and y-axis
+bacground-attachment:fixed,scroll
+
+*****instead of writing each one separately we can write single line background*****
+ex:background:url("") center/cover no-repeat fixed;
+
+ for abovethe order is fixed we can't  give randomly 
+
+
+cellspacing bewteen space b/w cells
+cellpadding space b/w content and border of cell
+colspan is merge the columns in a spefici row
+ 
+
+
+
+gradient means appyling two  colors at a time.
+background: linear-gradient(to bottom, blue, red);   to bottom means top to bottom
+ background: linear-gradient(to top right, red, green); to top means bootom to top
+ background: linear-gradient(20deg, red, green);
+
+resources : uigradients.com
+            cssgradient.io
+
+
+float and clear
+float:left,rigth,none
+clear:left,rigth,both,none
+whenever use float element immediately we have to  use clear  for next element 
+The CSS float property specifies how an element should float.
+
+The CSS clear property specifies what elements can float beside the cleared element and on which side.
+
+
+position atttibute
+
+
+ the values are
+1)relative means the element moves from its place 
+2)absolute by default it consider as body element as parent it means it consider full page then move the element.
+  if  we  mention any element as position :relative in its parent element it consider from there and then move element.
+3)fixed it is mostly used  for navbar  . it will consider as html element as parent
+4)static is combination relative and fixed.
+5)sticky
+
+media queries
+it means to define different style rules for different media types like computer ,printer,mobile etc,
+
+ex:
+@media screen and (min-width: 501px) {
+        body {
+          background-color: yellow;
+        }
+        .banner {
+          background-color: pink;
+        }s
+
+
+
+z-index means  z-axis    the default value is 0 for all html elements.
+the z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).
+*****when position :static the z-index does't work
+
+
+
+pseudo-element is used to style specified parts of an element.
+1)::before and  2)::after pseudo elements
+****these are inline elements and these does'nt  work  on img element.
+
+3)::first-line  it apply style to first line 
+4)::first-letter 
+
+ex:element name::first-letter
+
+
+
+
+Descendant selector
+symbol is >  it means direct child to apply styles.
+ex:div > h1 {
+        color: blue;
+        text-transform: capitalize;
+      }
+
+
+pseudo class
+
+1)element name:hover
+2) :visited
+3):active
+4):link
+
+The :hover selector is used to select elements when you mouse over them.
+Use the :link selector to style links to unvisited pages, 
+the :visited selector to style links to visited pages, 
+and the :active selector to style the active link.
+
+
+:root selector means root of the html document
+
+
+
+css animations
+
+transform: translate() means to move  x or y  direction ,
+           rotate(),
+           scale(), to increase or decerase in x or y direction . the default value is 1  but lessthan  1 its deceasre and more than 1 it will increase
+           skew()
+transition (change over time)
+          :property()
+          :duration()
+          :delay()
+
+shortand
+transition: transition-property transition-duration transition-delay(optional);
+or
+transition: transition-property transition-duration transition-timing-function(optional) transition-delay(optional);
+
+*****transition-timing-function means how the tansition takes place.They are
+
+1)"ease" is default.
+2)"ease" is slow start,fast,slow end
+3)"linear" is same speed start to end.
+4)ease-in is slow start
+5)ease-out is slow end 
+6)"ease-in-out"  is slow start,fast,slow end
+
+
+
+animation  (change over time with points) (0% 10% ........90% 100%)
+animation-name:
+animation-duration:
+animation-iteration count:
+or 
+animation:animation-name animation-duration animation-iteration count
+
+
+@keyframes animation-name
+*******using @keyframes we will add the properties here
+
+
+animation-fill-mode: the values are forward or backwards(default) 
+
+
+CSS variable 
+
+
+--variablename:value
+
+property:var(variablename)
+ex:
+:root {
+        --primarycolor: orange;
+        --maintransitions: all 0.4s linear;
+        --secondarycolor: pink;
+      }
+
+      .heading {
+        color: var(--primarycolor);
+      }
+      .heading:hover {
+        color: var(--secondarycolor);
+        transition: var(--maintransitions);
+      }
+
+***here root is global element
+
+
+Font Awesome
+
+"www.can i use.com" these website used to check which element supported by browser.
+Autoprefixer website 
+
+semantics tag means it will increase code readability.
+Clearly defines its content.
+ex:
+<article>
+<aside>
+<details>
+<figcaption>
+<figure>
+<footer>
+<header>
+<main>
+<mark>
+<nav>
+<section>
+<summary>
+<time>
+
+
+short-cut
+div>ul>li*2       ====                      here > means direct child
+
+
+<div>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
+    </div> 
+
+
+css flex-box
+  naming coventions
+parent called flex container
+direct children elements  are called flex items
+
+display:flex means it takes complete width
+display:inline-flex it takes required width of an element
+
+properties
+
+1)flex-direction: row(default),row-reverse,coloumn,coloumn-reverse  we should give in parent element only
+2)felx-wrap: nowrap(default),wrap,wrap-reverse 
+  
+3)justify-content means horizontal alignment the values
+:flex-start       it start from left  (top left)
+:flex-end          it start from left and move all to rightside. (top rigth)
+:center           it put centre in horizontal.
+:space-between      it put space b/w the items 
+:space-around       add margins/space left and rigth for each  flex items. (space is uneven)
+:space-evenly        add spaces left and rigth for each  flex item equally.    
+
+
+
+4)align-items  vertical alignment
+align-items: stretch;
+align-items: flex-start; it start from top
+align-items: flex-end;  it start from bottom
+align-items: center;   put it ceneter
+:baseline          if one item is big and other one is small    it attach small one to center of bigone.
+
+
+
+
+
+
+
+
+shortcut            output
+
+.box$*2========<div class="box1"></div>
+               <div class="box2"></div>
+
+
+grid lines are imagernary lines
+
+to create colums
+grid-template-columns: 500px 100px 200px;
+
+
+to create rows
+grid-template-rows: 200px 600px;
+
+
+
+
+if 3 coulums  the column grid will be 4
+if 5                          will be 6
+
+
+
+
+
+
+grid-column-start: 1;
+grid-column-end: 4;
+ grid-row-start: 1;
+  grid-row-end: 2;
+
+
+        /* short cut way */
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+
+
+
+fraction unit which divide the width into  required equal parts
+
+/* grid-template-columns: 200px 200px 200px 200px; */
+/* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(4, 1fr);     here 4 means how many times tp repeat and 1fr means size of part
+
+
+
+nodejs interactive foundation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+              
