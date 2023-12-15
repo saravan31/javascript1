@@ -1,0 +1,239 @@
+built in modules
+1. os
+2.path
+3.fs
+4.http
+
+
+const os=require('os')
+console.log(os.type())
+console.log(os.version())
+console.log(os.freemem())
+console.log(os.cpus())
+
+The module scope
+
+__dirname
+__filename
+
+
+const path=require('path')
+console.log(path.dirname(__filename));  here we getcomplete path of file
+console.log(path.basename(__filename)); here we get only file name
+
+console.log(path.extname(__filename)); here we get extension of the file
+console.log(path.parse(__filename));  it return the object 
+
+
+
+
+
+
+FS
+
+
+1)To read the file
+
+fs.readFile('./about.txt',(err,data)=>{
+    if (err) throw err;
+    console.log(data.toString())
+
+})
+
+
+fs.readFile('./about.txt','utf8',(err,data)=>{
+    if (err) throw err;
+    console.log(data)
+
+})
+
+
+
+http-hyper text transfer protocol  
+we can create servers
+const http=require("http")
+
+const myServer=http.createServer((req,res)=>{
+   res.write("hello Saravan!")
+   res.end()
+})
+myServer.listen(5500)
+
+
+
+
+
+
+local modules
+
+
+
+node init means install the package.json file in our folder.
+npm  i nodemon
+
+
+
+to run file ---> nodemon filename  
+other way
+go to package.json file in that  go to scripts in that the add new key value pair as "start":"nodemon filename"
+to run the file-----> npm start
+
+
+
+
+
+
+
+
+
+
+
+
+
+express.js is framework for  nodejs to build web applications.
+we can create servers.
+
+const express=require("express")
+const app=express()
+const port=5000;
+
+app.listen(port,()=>{
+    console.log("server is running sucessfully")
+})
+
+
+middlewares: sit b/w web application and server
+they process incoming request  and  modifiying outgoing responses.
+
+
+routes: when we make http requests  to server the routes send the  data in responses  to which  request  to get response.
+  
+get method
+
+app.get("/",function(request,response){
+      response.send("saravan");
+      console.log("saravan");
+})
+
+
+app.get("/users",function(request,response){
+    const users=["saravan","shanu","13590","saravan"]
+    response.send(users);
+    
+})
+app.get("/users/:345",function(request,response){
+    response.send(" sun rioses in east");
+    
+})
+
+
+
+
+here  to register midleware we use use  method
+
+
+const express=require("express");
+const app=express();
+
+// here  to register midleware we use use  method
+
+// app.use((req,res,next)=>{
+//     if(10<20)
+//     next()
+// })
+
+
+/// when we assign middleware  to varaible don't give app.use
+
+const handler=((req,res,next)=>{
+    if (10>20)
+    next()
+         
+})
+
+
+
+app.get("/home",handler,function(request,response){
+      response.send("saravan");
+      console.log("saravan");
+})
+
+
+app.get("/users",function(request,response){
+    const users=["saravan","shanu","13590","saravan"]
+    response.send(users);
+    
+})
+app.get("/users/:345",function(request,response){
+    response.send(" sun rioses in east");
+    
+})
+
+
+
+
+
+/// web server
+app.listen(8080,()=>{
+    console.log("server start sucessfully");
+})
+
+
+
+conecction to mongodb
+
+1)mongodbatlas
+2)mongodbcompass
+
+
+.env file  - to store the confidental informations.
+process.env  -means global object using this we can acess the variable from anywhere from the system
+
+using mogoose library we can interact with mongodb.
+using mongoClient we can require mongodb.
+
+
+
+API- it set rules and protocols that allows differnet software applications to communicate with each other.
+
+two  types api
+
+1)rest api
+2)soap api
+
+representational state transfer
+
+using crud operations we can built web services is rest api  through http methods
+
+mongoose - to interact with mongodb
+body-parser  -> when  we send data through http requests to server . to access the data from it we body-parser
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git
+
+track changes of the code.
+merge/combine code.
+
+github
+code secured
+
+
+
+
